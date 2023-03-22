@@ -94,6 +94,7 @@ body {
      }
   }
 
+
 .header__search{
     display: flex;
 }
@@ -179,12 +180,11 @@ body {
      }
   }
 
-form {
+.main__form {
     position: relative;
-    margin: 1em;
   }
   
-  input {
+  .main__form-input {
     display: block;
     width: 100%;
     height: 52px;
@@ -194,9 +194,10 @@ form {
     border: 1px solid #DACBFF;
     border-radius: 100px;
     padding-left: 30px;
+    color: #180B38;
   }
   
-  button {
+  .main__form-btn {
     position: absolute;
     top: 0.4px;
     right: 0.4px;
@@ -215,23 +216,32 @@ form {
   }
 
   @media (max-width:1921px) and (min-width:770px){
-    form {
+    .main__form {
         padding-left: calc(50% - 800px / 2);
         padding-right: calc(50% - 800px / 2);
+        margin-top: 40px;
       }
       
-      input {
+      .main__form-input {
         height: 80px;
         padding: 26px 0px;
         padding-left: 40px;
+        font-size: 20px;
       }
       
-      button {
+      .main__form-btn {
         top: 0px;
         right: 181px;
-        background: url(img/txt.svg) #7845F5 no-repeat center;
+        background: #7845F5 no-repeat center;
         width: 240px;
         height: 80px;
+      }
+
+      .main__form-btn::after {
+        content: attr(title);
+        font-size: 20px;
+        line-height: 140%;
+        color: #FFFFFF;
       }
     
       ::placeholder{
@@ -240,23 +250,66 @@ form {
   }
 
   @media (max-width:769px) and (min-width:426px){
-    form {
+    .main__form {
         padding-left: calc(50% - 718px / 2);
         padding-right: calc(50% - 718px / 2);
+        margin-top: 40px;
       }
       
-      input {
+      .main__form-input {
         height: 80px;
         padding: 26px 0px;
         padding-left: 40px;
+        font-size: 20px;
       }
       
-      button {
+      .main__form-btn {
         top: 0px;
         right: 0px;
-        background: url(img/txt.svg) #7845F5 no-repeat center;
+        background: #7845F5 no-repeat center;
         width: 240px;
         height: 80px;
+      }
+    
+      .main__form-btn::after {
+        content: attr(title);
+        font-size: 20px;
+        line-height: 140%;
+        color: #FFFFFF;
+      }
+
+      ::placeholder{
+        font-size: 20px;
+      }
+  }
+
+  @media (max-width:1159px) and (min-width:771px){
+    .main__form {
+        padding-left: calc(50% - 718px / 2);
+        padding-right: calc(50% - 718px / 2);
+        margin-top: 40px;
+      }
+      
+      .main__form-input {
+        height: 80px;
+        padding: 26px 0px;
+        padding-left: 40px;
+        font-size: 20px;
+      }
+      
+      .main__form-btn {
+        top: 0px;
+        right: 35px;
+        background: #7845F5 no-repeat center;
+        width: 240px;
+        height: 80px;
+      }
+
+      .main__form-btn::after {
+        content: attr(title);
+        font-size: 20px;
+        line-height: 140%;
+        color: #FFFFFF;
       }
     
       ::placeholder{
@@ -273,6 +326,7 @@ form {
     text-decoration-line: underline;
     color: #8C849E;
     margin-top: 18px;
+    cursor: pointer;
 }
 
 .main__info-text{
@@ -369,6 +423,7 @@ form {
     line-height: 140%;
     color: #180B38;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .main__request-subtitle{
